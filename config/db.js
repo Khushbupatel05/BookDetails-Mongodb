@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const MONGO_URI = "mongodb://localhost:27017/bookStoreDb"
+const MONGO_URI = "mongodb://localhost:27017/bookDb"
 
 const connectDb = async () => {
     try{

@@ -26,15 +26,8 @@ const bookSchema = new mongoose.Schema({
         required: true
     },
 
-    format: {
-        type: String,
-        required: true
-    },
-    features: {
-        type: [String],
-        required: true
-    }
+   
 })
 
-const Books = mongoose.model('Books', bookSchema)
-export default Books
+const Books = mongoose.model('Books', bookSchema);
+export default Books;

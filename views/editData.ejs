@@ -10,7 +10,7 @@
 </head>
 
 <body class="form-page">
-    <%- include('partials/header') %>
+    
         <main class="container mx-auto my-5 pt-lg-5">
             <div class="form-card">
                 <h3 class="text-center mb-4 fw-semibold" style="color:#6b67fb;">Edit Book Details</h3>
@@ -48,13 +48,13 @@
                             <label class="form-label text-black">Genre :</label>
                             <select name="genre" class="form-select" required>
                                 <option value="">Select Genre</option>
-                                <option <%=editBook.genre=="Classic" ? "selected" : "" %>>Classic</option>
                                 <option <%=editBook.genre=="Science" ? "selected" : "" %>>Science</option>
-                                <option <%=editBook.genre=="Kids" ? "selected" : "" %>>Kids</option>
                                 <option <%=editBook.genre=="Comics" ? "selected" : "" %>>Comics</option>
+                                <option <%=editBook.genre=="Kids" ? "selected" : "" %>>Historic</option>
+                                <option <%=editBook.genre=="Classic" ? "selected" : "" %>>Classic</option>
                                 <option <%=editBook.genre=="Romance" ? "selected" : "" %>>Romance</option>
                                 <option <%=editBook.genre=="Thriller" ? "selected" : "" %>>Thriller</option>
-                                <option <%=editBook.genre=="Self-help" ? "selected" : "" %>>Self-help</option>
+                                <option <%=editBook.genre=="Self-help" ? "selected" : "" %>>Motivation</option>
                             </select>
                         </div>
                     </div>

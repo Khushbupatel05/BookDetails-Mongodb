@@ -1,24 +1,15 @@
-import express from "express"
-import connectDb from './config/db.js'
+import express from "express";
 import Books from "./models/bookModels.js";
+import connectDb from "./config/db.js";
 
-const app = express()
+const app = express();
 const PORT = 5000;
 
 app.set("view engine", 'ejs')
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }))
-connectDb()
+connectDb();
 
-
-app.get("/", (req, res) => {
-    res.render("home");
-});
-
-
-app.get("/add-book", (req, res) => {
-    res.render("addBook");
-});
 
 
 app.get("/books", async (req, res) => {
@@ -31,7 +22,7 @@ app.get("/books", async (req, res) => {
 });
 
 
-app.post('/add-book', async (req, res) => {
+app.post('/books', async (req, res) => {
     const data = req.body
     try {
         const newBook = new Books(data)
@@ -76,5 +67,5 @@ app.get('/delete-book/:deleteId', async (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Server is Running on PORT : ${PORT}`)
+    console.log(`Server is Running on PORT : http://localhost:5000`)
 })
