@@ -6,32 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BookApp Home</title>
 
-    <link rel="stylesheet" href="/assets/css/Bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/Bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 
+<style>
+    .hero-img {
+        height: 100vh;
+        width: 100%;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat;
+    }
+</style>
+
 <body>
-    
-        <section class="hero">
 
-            <div class="hero-content text-center">
-                <h1>Expand your mind,<br> reading a book</h1>
+    <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
 
-                <p>
-                    Reading books is a wonderful way to spend your time.
-                    Here we believe reading will help you make better connections.
-                </p>
 
-                <div class="hero-buttons">
-                    <a href="/add-book" class="btn-primary">Add Book</a>
-                    <a href="/books" class="btn-secondary">View Books</a>
+
+        <div class="carousel-inner">
+
+            <!-- SLIDE 1 -->
+            <div class="carousel-item active">
+                <div class="hero-img d-flex align-items-center justify-content-center"
+                    style="background-image: url('https://susan-demo.myshopify.com/cdn/shop/files/Home-2-Slider-1.jpg?v=1613600608');">
+
+                    <div class="container text-center">
+                        <p class="text-uppercase text-muted mb-2" style="letter-spacing: 2px;">New Arrivals</p>
+
+                        <h1 class="display-3 fw-bold mb-3 text-dark">
+                            Build Your Digital Bookshelf
+                        </h1>
+
+                        <p class="text-dark mb-4">
+                            Store every story you love. From classics to new arrivals,
+                            your bookshelf grows with you—beautifully organized.
+                        </p>
+
+                        <a href="/books" class="btn btn-outline-dark btn-lg px-5 rounded-pill">
+                            Explore Library
+                        </a>
+
+                    </div>
                 </div>
             </div>
 
-            <div class="hero-img">
-                <img src="/assets/images/home-img.png" alt="Books Image">
-            </div>
-        </section>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
