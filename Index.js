@@ -11,6 +11,13 @@ app.use(express.urlencoded({ extended: true }))
 connectDb();
 
 
+app.get("/", (req, res) => {
+    res.render("home");
+});
+
+app.get("/add-book", (req, res) => {
+    res.render("addBook");
+});
 
 app.get("/books", async (req, res) => {
     try {
@@ -66,6 +73,11 @@ app.get('/delete-book/:deleteId', async (req, res) => {
     }
 })
 
-app.listen(PORT, () => {
-    console.log(`Server is Running on PORT : http://localhost:5000`)
-})
+app.listen(PORT, (err) => {
+    if (err) {
+        console.log("Something went wrong.....");
+    } else {
+        console.log("server is run...");
+        console.log(`http://localhost:${PORT}`);
+    }
+});
